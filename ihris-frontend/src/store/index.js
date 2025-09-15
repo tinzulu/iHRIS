@@ -17,6 +17,10 @@ export default new Vuex.Store({
     signup: {},
     idp: 'ihris',
     security_off: false,
+    route: {
+      from: "/",
+      to: "/"
+    },
     message: {
       type: "info",
       text: null,

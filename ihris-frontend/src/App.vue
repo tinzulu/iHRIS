@@ -166,7 +166,7 @@ export default {
                 this.$router.push("/")
               }
             }
-            if(this.$store.state.user.loggedin && data.pages && data.pages.home && data.pages.home.url) {
+            if(this.$store.state.user.loggedin && data.pages && data.pages.home && data.pages.home.url && this.$store.state.route.to.path === "/") {
               this.$router.push(data.pages.home.url)
             }
           })

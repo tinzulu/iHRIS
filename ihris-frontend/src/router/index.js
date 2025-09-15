@@ -198,6 +198,8 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  store.state.route.from = from
+  store.state.route.to = to
   if (store.state.user.obj.resource && store.state.user.obj.resource.id === 'ihris-user-loggedout') {
     if (to.path !== '/') {
       next({

@@ -350,7 +350,7 @@ const setUserdata = async (req) => {
             logger.error(err.message);
           });
   
-        await getCodeSystem(usersData[i]["JobTitle"], "ihris-job-demo")
+        await getCodeSystem(usersData[i]["JobTitle"], "ihris-job")
           .then((response) => {
             usersData[i].jobCoding = response;
           })
