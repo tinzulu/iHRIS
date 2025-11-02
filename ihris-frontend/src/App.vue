@@ -82,7 +82,7 @@ export default {
     header: {
       title: false,
       site: null,
-      logo: "iHRIS5Logo.png",
+      logo: "varapi-logo.png",
       auths: [],
     },
     footer: {

@@ -5,7 +5,7 @@
           <v-card class="py-8 px-4" min-width="500px">
             <v-card-title class="justify-center">
               <v-img
-                  :src="'/images/iHRIS5LogoBig.png'"
+                  :src="'/images/varapi-logo-big.png'"
                   align="center"
                   contain
                   justify="center"

@@ -66,7 +66,7 @@
       "Gender": "Gender",
       "Age": "Age",
       "Welcome to iHRIS!": " Welcome to iHRIS!",
-      "description": "iHRIS is IntraHealth International's free, open source software that helps countries around the world track and manage their health workforce data to improve access to services. Countries use it to capture and maintain high-quality information for health workforce planning, management, regulation, and training.",
+      "description": "Varapi is based on iHRIS to manage Zimbabwe Health care providers",
       "Sign in": "Sign in",
       "Username/Email": "Username/Email",
       "Password": "Password",
@@ -97,6 +97,7 @@
       "Export" : "Export",
       "Customize Report" : "Customize Report",
       "Please fill in all fields" : "Please fill in all fields",
+      "Filters": "Filters",
       "Report": "Report",
       "Configure": "Configure",
       "Last Ended Indexing Time": "Last Ended Indexing Time",
@@ -113,7 +114,7 @@
       "Print": "Print",
       "No": "No",
       "Values For": "Values For",
-      "Apply1": "Apply"
+      "Apply1": "Apply",
       "Added successfully": "Added successfully"
     }
   }

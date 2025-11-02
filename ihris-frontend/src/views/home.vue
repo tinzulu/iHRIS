@@ -114,7 +114,7 @@
                 <v-card class="pa-4 pt-12"  max-width="600" min-height="600">
                   <v-card-title class="justify-center">
                     <v-img
-                      :src="'/images/iHRIS5LogoBig.png'"
+                      :src="'/images/varapi-logo-big.png'"
                       align="center"
                       contain
                       justify="center"
