@@ -1,7 +1,7 @@
 {
     "App": {
       "title": "Manage",
-      "site": "Demo",
+      "site": "",
       "footer": {
         "About iHRIS": "About iHRIS",
         "Feedback": "Feedback",
@@ -430,7 +430,7 @@
         "Phone": "Phone",
         "Gender": "Gender",
         "Age": "Age",
-        "Welcome to iHRIS!": "Welcome to iHRIS!",
+        "Welcome to iHRIS!": "Welcome to Varapi!",
         "description": "Varapi is based on iHRIS to manage Zimbabwe Health care providers",
         "Sign in": "Sign in",
         "Username/Email": "Username/Email",

@@ -42,7 +42,7 @@
       <router-view v-if="$store.state.user.loggedin" name="homeNav" :nav="nav" :key="$route.fullPath"></router-view>
     </v-content>
 
-    <the-footer :footer="footer" />
+    <the-footer v-if="$store.state.user.loggedin" :footer="footer" />
   </v-app>
 </template>
 

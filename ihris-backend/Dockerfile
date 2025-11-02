@@ -1,18 +1,23 @@
-FROM node:16-slim
+FROM node:16-bullseye-slim
 
-ARG branch=master
-RUN apt-get -qq update && apt-get install -y -qq git && apt-get install -y --no-install-recommends wget
-# these look to only be required with node 18
-# RUN apt-get install -y build-essential python3 pkg-config libpixman-1-dev libcairo2-dev libpango1.0-dev
-# RUN apt-get install -y libpango1.0-dev
+RUN apt-get -qq update \
+  && apt-get install -y -qq git wget \
+  && apt-get install -y -qq --no-install-recommends \
+    build-essential python3 pkg-config \
+    libcairo2-dev libpango1.0-dev libjpeg62-turbo-dev libgif-dev librsvg2-dev libpixman-1-dev \
+  && rm -rf /var/lib/apt/lists/*
 
-RUN git clone --branch ${branch} https://github.com/iHRIS/iHRIS /src/
+WORKDIR /src
+COPY . /src
 
 WORKDIR /src/tools
-RUN npm install
+RUN rm -rf node_modules \
+  && npm ci
 
 WORKDIR /src/ihris-backend
-RUN npm install
+RUN rm -rf node_modules \
+  && npm ci \
+  && npm rebuild canvas --build-from-source || true
 # necessary
 RUN mv ihris-backend-site site
 
@@ -20,7 +25,8 @@ RUN mv ihris-backend-site site
 # RUN cp /src/server/config/config_cicd_template.json /src/server/config/config_cicd.json
 
 WORKDIR /src/ihris-backend/site
-RUN npm install
+RUN rm -rf node_modules \
+  && npm ci
 RUN cp config/baseConfig.json.example config/baseConfig.json
 
 # generate fsh files

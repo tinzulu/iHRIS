@@ -6,7 +6,7 @@
       <span v-if="header.title" class="primary--text">
         {{ $t('App.title') }}
       </span>
-      <span class="secondary--text" v-if="header.site"> | 
+      <span class="secondary--text" v-if="header.site">
         {{ $t('App.site')}}
       </span>
     </v-toolbar-title>
